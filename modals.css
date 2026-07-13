@@ -1,11 +1,4 @@
-/* ============================================================
-   MODALS.CSS — cart / checkout / success modals + toast
-   Copied from shop.css so cart styling matches across all pages.
-   Link this on every page that includes the modal markup:
-     <link rel="stylesheet" href="modals.css">
-   ============================================================ */
 
-/* ---------- Toast notification (used by add-to-cart / wishlist) ---------- */
 
 .notification{
     position:fixed;
@@ -28,10 +21,6 @@
     opacity:1;
     transform:translateY(0);
 }
-
-/* ============================================================
-   MODALS — Cart / Checkout / Success
-   ============================================================ */
 
 .cart{
     cursor:pointer;
