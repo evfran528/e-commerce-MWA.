@@ -1,3 +1,42 @@
+
+.category-container {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.category-card {
+    position: relative;
+    background: #fafafa;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(16, 16, 16, 0.06);
+    text-align: center;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 48px rgba(16, 16, 16, 0.14);
+}
+
+.category-card:hover img {
+    transform: scale(1.08);
+}
+@media (max-width: 480px) {
+    .category-card img {
+        height: 180px;
+    }
+}
 * {
   margin: 0;
   padding: 0;
@@ -121,6 +160,7 @@ nav a:hover {
     width:30px;
     height:24px;
     background:transparent;
+    flex-shrink:0;
 }
 
 .hamburger span{
@@ -130,6 +170,18 @@ nav a:hover {
     background:#111;
     border-radius:2px;
     transition:.3s;
+}
+
+.hamburger.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2){
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
 }
 
 .footer-content a i:hover {
@@ -185,7 +237,7 @@ nav a:hover {
     position:absolute;
     top:100%;
     left:0;
-    width:700px;
+    width:780px;
     display:flex;
     background:#fff;
     border-radius:15px;
@@ -223,9 +275,6 @@ nav a:hover {
 
 .menu-right{
     flex:1;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
     padding:20px;
 }
 
@@ -238,9 +287,7 @@ nav a:hover {
     height:90px;
     border-radius:50%;
     object-fit:cover;
-    margin:auto;
-    transition:.3s;
-
+    object-position:center;
 }
 
 .menu-card img:hover{
