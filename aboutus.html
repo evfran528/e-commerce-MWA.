@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aboutus.css">
+    <link rel="stylesheet" href="modals.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>MWA | About Us</title>
 </head>  
 <body>
 
     <header>
-    <div class="left">
-        <a href="homepage.html" class="logo">
+      <div class="left">
+
+        <a href="home.html" class="logo">
             MWA<span class="logo-dot">.</span>
         </a>
 
-        <nav>
-            <a href="homepage.html">Home</a>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="home.html">Home</a>
 
             <div class="dropdown">
 
@@ -26,107 +34,78 @@
 
                     <div class="menu-left">
 
-        <a href="#" class="category-link active"
-           data-target="men-products">
-           Men
-        </a>
+                        <a href="shop.html?category=men" class="category-link active" data-target="men-products">Men</a>
+                        <a href="shop.html?category=women" class="category-link" data-target="women-products">Women</a>
+                        <a href="shop.html?category=kids" class="category-link" data-target="kids-products">Kids</a>
 
-        <a href="#" class="category-link"
-           data-target="women-products">
-           Women
-        </a>
+                    </div>
 
-          <a href="#" class="category-link"
-           data-target="kids-products">
-           Kids
-        </a>
+                    <div class="menu-right">
 
-    </div>
+                        <!-- MEN -->
+                        <div id="men-products" class="product-group active">
+                            <div class="menu-card">
+                                <a href="shop.html?category=men"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=richboyz"><img src="images/richboyzLogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=adidas"><img src="images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
 
-    <div class="menu-right">
+                        <!-- Kids -->
+                        <div id="kids-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=richboyz"><img src="images/richboyzLogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=adidas"><img src="images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
 
-        <!-- MEN -->
-        <div id="men-products" class="product-group active">
+                        <!-- WOMEN -->
+                        <div id="women-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=women"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=richboyz"><img src="images/richboyzLogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=adidas"><img src="images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
 
-            <div class="menu-card">
-                <a href="Mens.html">
-                <img src="images/hoodie.jpg">
-                <span >View All</span>
-                </a>
+                    </div>
+                </div>
             </div>
 
-            <div class="menu-card">
-                <img src="images/jacket.jpg">
-                <span>Jackets</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/shirt.jpg">
-                <span>T-Shirts</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/jeans.jpg">
-                <span>Jeans</span>
-            </div>
-
-        </div>
-
-          <!-- Kids -->
-          <div id="kids-products" class="product-group active">
-
-            <div class="menu-card">
-                <a href="kids.html">
-                <img src="images/hoodie.jpg">
-                <span >View All</span>
-                </a>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/jacket.jpg">
-                <span>Jackets</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/shirt.jpg">
-                <span>T-Shirts</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/jeans.jpg">
-                <span>Jeans</span>
-            </div>
-
-        </div>
-
-        <!-- WOMEN -->
-        <div id="women-products" class="product-group">
-
-            <div class="menu-card">
-                <img src="images/product1.png">
-                <span>View All</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/product2.png">
-                <span>Crop Tops</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/product3.png">
-                <span>Skirts</span>
-            </div>
-
-            <div class="menu-card">
-                <img src="images/product4.png">
-                <span>Handbags</span>
-            </div>
-        </div>
-      </div>
-    </div>
-</div>
-
+            <a href="shop.html">Shop</a>
             <a href="aboutus.html">About Us</a>
+
         </nav>
     </div>
 
@@ -149,7 +128,7 @@
 
     <div class="right">
         <i class="far fa-heart"></i>
-        <div class="cart">
+        <div class="cart" id="cartTrigger">
             <img src="images/addto.png" id="cart-icon">
             <span id="cart-count">0</span>
         </div>
@@ -171,7 +150,7 @@
                 designs to help you stand out and showcase your unique style every day.
             </p>
 
-            <a href="homepage.html" class="btn">Explore Collection</a>
+            <a href="shop.html" class="btn">Explore Collection</a>
         </div>
 
         <div class="hero-image">
@@ -198,6 +177,42 @@
             </p>
         </div>
     </section>
+
+   <!-- CATEGORIES -->
+
+<section class="categories">
+
+    <h2>Shop by Category</h2>
+
+    <div class="category-container">
+
+        <a href="Mens.html" class="category-card">
+
+            <img src="images/mensss.png">
+
+            <!-- <h3>Men</h3> -->
+
+        </a>
+
+        <a href="women.html" class="category-card">
+
+            <img src="./images/womens.png">
+
+            <!-- <h3>Women</h3> -->
+
+        </a>
+
+        <a href="kids.html" class="category-card">
+
+            <img src="./images/kids.png" >
+
+            <!-- <h3>Kids</h3> -->
+
+        </a>
+
+    </div>
+
+</section>
 
    <!-- FEATURES-->
 <section class="features">
@@ -272,7 +287,6 @@
                 <p>Creativity</p>
             </div>
 
-            <!-- Duplicate (for infinite scrolling) -->
             <div class="stat-item">
                 <h2>4</h2>
                 <p>Team Members</p>
@@ -307,7 +321,7 @@
 
         <!-- CARD 1 -->
         <div class="card active">
-            <img src="chloe.png" alt="Member 1">
+            <img src="images/chloe.png" alt="Member 1">
             <div class="overlay">
                 <div class="content">
                     <h2>Front-End Developer</h2>
@@ -318,7 +332,7 @@
 
         <!-- CARD 2 -->
         <div class="card">
-            <img src="fran.png" alt="Member 2">
+            <img src="images/fran.png" alt="Member 2">
             <div class="overlay">
                 <div class="content">
                     <h2>Back-End Developer</h2>
@@ -329,7 +343,7 @@
 
         <!-- CARD 3 -->
         <div class="card">
-            <img src="yvan.png" alt="Member 3">
+            <img src="images/yvan.png" alt="Member 3">
             <div class="overlay">
                 <div class="content">
                     <h2>UI / UX Designer</h2>
@@ -395,8 +409,8 @@
 
             <h3>Quick Links</h3>
 
-            <a href="#">Home</a><br>
-            <a href="#">Shop</a><br>
+            <a href="home.html">Home</a><br>
+            <a href="shop.html">Shop</a><br>
             <a href="#">About Us</a>
 
         </div>
@@ -439,7 +453,84 @@
     </p>
 </footer>
 
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal-overlay" id="cartOverlay">
+    <div class="modal-box cart-box">
+        <button class="modal-close" id="cartClose" aria-label="Close">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div class="cart-items" id="cartItems"></div>
+        <p class="cart-empty" id="cartEmptyMsg" hidden>Your cart is empty.</p>
+
+        <div class="cart-summary">
+            <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+
+<div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal-box checkout-box">
+        <button class="modal-close" id="checkoutClose" aria-label="Close">&times;</button>
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm">
+
+            <label class="ck-field">
+                Full Name
+                <input type="text" id="ckName" required placeholder="Juan Dela Cruz">
+            </label>
+
+            <label class="ck-field">
+                Delivery Address
+                <textarea id="ckAddress" required placeholder="House No., Street, Barangay, City"></textarea>
+            </label>
+
+            <label class="ck-field">
+                Contact Number
+                <input type="tel" id="ckPhone" required placeholder="09xx xxx xxxx">
+            </label>
+
+            <div class="payment-options">
+                <span class="qv-size-label">Payment Method</span>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="cod" checked>
+                    Cash on Delivery
+                </label>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="online">
+                    Online Payment
+                </label>
+            </div>
+
+            <div class="checkout-total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+        <div class="success-icon">&#10003;</div>
+        <h2>Order Placed Successfully!</h2>
+        <p id="successMsg">Thank you for shopping with MWA.</p>
+        <button class="success-close-btn" id="successCloseBtn">Continue Shopping</button>
+    </div>
+</div>
+
+<script src="cart.js"></script>
+<script src="cart-ui.js"></script>
 <script src="aboutus.js"></script>
 <script src="profile.js"></script>
+
 </body>
 </html>
