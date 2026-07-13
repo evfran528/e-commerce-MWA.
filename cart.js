@@ -1,8 +1,3 @@
-/* ============================================================
-   CART.JS — shared cart storage for the whole site
-   Include this BEFORE home.js / aboutus.js / shop.js on every
-   page:  <script src="cart.js"></script>
-   ============================================================ */
 
 const CartStore = (function () {
 
@@ -26,8 +21,6 @@ const CartStore = (function () {
 
             localStorage.setItem(STORAGE_KEY, JSON.stringify(cart));
 
-            // notify listeners on THIS page (storage event only fires on
-            // OTHER tabs/pages, not the one that made the change)
             window.dispatchEvent(new CustomEvent("cart:updated", { detail: cart }));
 
         } catch (e) {
@@ -104,11 +97,6 @@ const CartStore = (function () {
 
 })();
 
-/* ============================================================
-   BADGE SYNC — keeps the header cart icon correct on every page,
-   including when another tab/page changes the cart.
-   ============================================================ */
-
 function initCartBadge() {
 
     const cartCounter = document.getElementById("cart-count");
@@ -122,10 +110,8 @@ function initCartBadge() {
 
     refresh();
 
-    // same-tab updates (this page just changed the cart)
     window.addEventListener("cart:updated", refresh);
 
-    // cross-tab / cross-page updates
     window.addEventListener("storage", (e) => {
         if (e.key === "mwa_cart") refresh();
     });
