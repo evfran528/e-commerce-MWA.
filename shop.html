@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="shop.css">
+    <title>MWA | Shop All</title>
+</head>
+<body>
+
+
+<header>
+
+    <div class="left">
+
+        <a href="home.html" class="logo">
+            MWA<span class="logo-dot">.</span>
+        </a>
+
+        <nav>
+            <a href="home.html">Home</a>
+
+            <div class="dropdown">
+
+                <a href="#">Categories ▾</a>
+
+                <div class="mega-menu">
+
+                    <div class="menu-left">
+
+                        <a href="shop.html?category=men" class="category-link active" data-target="men-products">Men</a>
+                        <a href="shop.html?category=women" class="category-link" data-target="women-products">Women</a>
+                        <a href="shop.html?category=kids" class="category-link" data-target="kids-products">Kids</a>
+
+                    </div>
+
+                    <div class="menu-right">
+
+                        <!-- MEN -->
+                        <div id="men-products" class="product-group active">
+                            <div class="menu-card">
+                                <a href="shop.html?category=men"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=richboyz"><img src="images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=adidas"><img src="images/adidasLogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Kids -->
+                        <div id="kids-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=richboyz"><img src="images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=adidas"><img src="images/adidasLogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- WOMEN -->
+                        <div id="women-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=women"><img src="images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=nike"><img src="images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=richboyz"><img src="images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=adidas"><img src="images/adidasLogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=uniqlo"><img src="images/uniqloLogo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <a href="shop.html" style="color:#d6336c;">Shop</a>
+            <a href="aboutus.html">About Us</a>
+
+        </nav>
+    </div>
+
+    <div class="center">
+        <div class="search-box">
+            <input id="searchInput" type="text" placeholder="Search Clothes...">
+            <button id="searchBtn"><img src="images/sirch.png"></button>
+        </div>
+    </div>
+
+    <div class="right">
+        <i class="far fa-heart"></i>
+        <div class="cart" id="cartTrigger">
+            <img src="images/addto.png" id="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+
+</header>
+
+<!-- ================= SHOP HERO (image slider) ================= -->
+
+<section class="shop-hero" id="heroSlider">
+
+    <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide" style="background-image:url('images/AllBrands.png')"></div>
+        <div class="hero-slide active" style="background-image:url('images/slide1.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/slide2.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/slide3.png')"></div>
+        <div class="hero-slide" style="background-image:url('images/slide4.png')"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+
+        <div class="hero-content"> 
+            <p class="shop-eyebrow">New drops, every week</p>
+            <h1> <span>MWA</span><span style="color: #d6336c;">.</span></h1>
+            <p class="shop-sub">Streetwear staples from the brands you actually wear.</p>
+         </div>
+
+    <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">&#10094;</button>
+    <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">&#10095;</button>
+
+    <div class="hero-dots" id="heroDots"></div>
+
+</section>
+
+<!-- ================= BRAND STRIP ================= -->
+
+<section class="brand-strip">
+
+    <div class="brand-strip-inner">
+
+        <button class="brand-pill active" data-brand="all">
+            All Brands
+        </button>
+
+        <button class="brand-pill" data-brand="nike">
+            <span class="brand-dot"></span>Nike
+        </button>
+
+        <button class="brand-pill" data-brand="richboyz">
+            <span class="brand-dot"></span>RichBoyz
+        </button>
+
+        <button class="brand-pill" data-brand="adidas">
+            <span class="brand-dot"></span>Adidas
+        </button>
+
+        <button class="brand-pill" data-brand="uniqlo">
+            <span class="brand-dot"></span>Uniqlo
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ================= SHOP MAIN ================= -->
+
+<section class="shop-main">
+
+    <div class="shop-toolbar">
+
+        <div class="toolbar-left">
+
+            <span id="resultCount">57 items</span>
+
+            <div class="chip-group" id="categoryChips">
+                <button class="chip active" data-category="all">All</button>
+                <button class="chip" data-category="men">Men</button>
+                <button class="chip" data-category="women">Women</button>
+                <button class="chip" data-category="kids">Kids</button>
+            </div>
+
+        </div>
+
+        <div class="toolbar-right">
+
+            <label for="sortSelect">Sort by</label>
+            <select id="sortSelect">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="newest">Newest</option>
+            </select>
+
+        </div>
+
+    </div>
+
+    <div class="filter-row">
+
+        <span class="filter-row-label">Shop by type</span>
+
+        <div class="chip-group" id="typeChips">
+            <button class="chip active" data-type="all">All</button>
+            <button class="chip" data-type="hoodie">Hoodie</button>
+            <button class="chip" data-type="tshirt">T-Shirt</button>
+            <button class="chip" data-type="pants">Pants</button>
+            <button class="chip" data-type="shorts">Shorts</button>
+            <button class="chip" data-type="dress">Dress</button>
+        </div>
+
+    </div>
+
+    <div class="shop-grid" id="shopGrid">
+        <!-- Product cards injected by shop.js -->
+    </div>
+
+    <p class="no-results" id="noResults" hidden>No products match these filters. Try clearing a filter.</p>
+
+    <div class="load-more-wrap">
+        <button id="loadMoreBtn" class="load-more-btn">Load More</button>
+    </div>
+
+</section>
+
+<!-- ================= FOOTER (same as home.html) ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+            <a href="home.html" class="logo">MWA<span class="logo-dot">.</span></a>
+            <p>Modern Fashion Store</p>
+        </div>
+
+        <div>
+            <h3>Quick Links</h3>
+            <a href="home.html">Home</a><br>
+            <a href="shop.html">Shop</a><br>
+            <a href="aboutus.html">About Us</a>
+        </div>
+
+        <div>
+            <h3>Follow Us</h3>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">© 2026 MWA | CLOTHING</p>
+
+</footer>
+
+<!-- ================= QUICK VIEW MODAL (size selection) ================= -->
+
+<div class="modal-overlay" id="quickViewOverlay">
+    <div class="modal-box quickview-box">
+        <button class="modal-close" id="qvClose" aria-label="Close">&times;</button>
+        <div class="qv-content">
+            <div class="qv-media">
+                <img id="qvImg" src="" alt="">
+            </div>
+            <div class="qv-details">
+                <span class="qv-brand" id="qvBrand"></span>
+                <h2 id="qvName"></h2>
+                <div class="qv-price" id="qvPrice"></div>
+
+                <div class="qv-size-section">
+                    <span class="qv-size-label">Size</span>
+                    <div class="qv-size-options" id="qvSizeOptions"></div>
+                </div>
+
+                <button class="qv-add-btn" id="qvAddBtn" disabled>Select a size</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CART MODAL ================= -->
+
+<div class="modal-overlay" id="cartOverlay">
+    <div class="modal-box cart-box">
+        <button class="modal-close" id="cartClose" aria-label="Close">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div class="cart-items" id="cartItems"></div>
+        <p class="cart-empty" id="cartEmptyMsg" hidden>Your cart is empty.</p>
+
+        <div class="cart-summary">
+            <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!-- ================= CHECKOUT MODAL ================= -->
+
+<div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal-box checkout-box">
+        <button class="modal-close" id="checkoutClose" aria-label="Close">&times;</button>
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm">
+
+            <label class="ck-field">
+                Full Name
+                <input type="text" id="ckName" required placeholder="Juan Dela Cruz">
+            </label>
+
+            <label class="ck-field">
+                Delivery Address
+                <textarea id="ckAddress" required placeholder="House No., Street, Barangay, City"></textarea>
+            </label>
+
+            <label class="ck-field">
+                Contact Number
+                <input type="tel" id="ckPhone" required placeholder="09xx xxx xxxx">
+            </label>
+
+            <div class="payment-options">
+                <span class="qv-size-label">Payment Method</span>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="cod" checked>
+                    Cash on Delivery
+                </label>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="online">
+                    Online Payment
+                </label>
+            </div>
+
+            <div class="checkout-total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+
+        </form>
+    </div>
+</div>
+
+<!-- ================= ORDER SUCCESS ================= -->
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+        <div class="success-icon">&#10003;</div>
+        <h2>Order Placed Successfully!</h2>
+        <p id="successMsg">Thank you for shopping with MWA.</p>
+        <button class="success-close-btn" id="successCloseBtn">Continue Shopping</button>
+    </div>
+</div>
+
+<script src="shop.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>
