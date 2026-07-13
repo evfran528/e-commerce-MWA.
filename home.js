@@ -1,14 +1,36 @@
 // ADD TO CART
-let cartCount = 0;
-
 const cartCounter = document.getElementById("cart-count");
+
+function extractProductFromCard(card) {
+
+    const name = card.dataset.name
+        || card.querySelector("h3")?.innerText.trim()
+        || "Product";
+
+    const priceText = card.dataset.price
+        || card.querySelector(".price, .price-now")?.innerText.replace(/[^0-9.]/g, "")
+        || "0";
+
+    return {
+        id: card.dataset.id || name.toLowerCase().replace(/\s+/g, "-"),
+        name: name,
+        brandLabel: card.dataset.brand || "MWA",
+        price: parseFloat(priceText) || 0,
+        img: card.dataset.img || card.querySelector("img")?.src || ""
+    };
+
+}
 
 document.querySelectorAll(".product-card button").forEach(button => {
 
     button.addEventListener("click", () => {
-        cartCount++;
-        cartCounter.textContent = cartCount;
-        cartCounter.style.display = "flex";
+
+        const card = button.closest(".product-card");
+        const product = extractProductFromCard(card);
+        const size = card.dataset.size || "One Size";
+
+        CartStore.addItem(product, size);
+
         showNotification("Product added to cart!");
 
     });
@@ -137,13 +159,28 @@ const slideButton = document.querySelector(".slide button");
 
 slideButton.addEventListener("click",()=>{
 
-    document.querySelector(".featured").scrollIntoView({
-
-        behavior:"smooth"
-
-    });
+    window.location.href = "shop.html";
 
 });
+
+// HERO BACKGROUND SLIDESHOW
+
+const slideBgItems = document.querySelectorAll(".slide-bg-item");
+let slideBgIndex = 0;
+
+if (slideBgItems.length > 1) {
+
+    setInterval(() => {
+
+        slideBgItems[slideBgIndex].classList.remove("active");
+
+        slideBgIndex = (slideBgIndex + 1) % slideBgItems.length;
+
+        slideBgItems[slideBgIndex].classList.add("active");
+
+    }, 4000);
+
+}
 
 // cart ICON
 
@@ -282,7 +319,7 @@ document.querySelectorAll("section").forEach(section=>{
 });
 
 
-// FEATURED CAROUSEL
+// CAROUSEL
 
 const productSlider = document.querySelector(".products");
 const nextBtn = document.querySelector(".next");
@@ -375,7 +412,49 @@ dropdown.addEventListener("click", function(e){
 window.addEventListener("resize", updateCarousel);
 updateCarousel();
 
-// CATEGORY LINK HOVER EFFECT
+// HAMBURGER MENU TOGGLE
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mainNav = document.getElementById("mainNav");
+
+if (hamburgerBtn && mainNav) {
+
+    hamburgerBtn.addEventListener("click", () => {
+
+        const isOpen = mainNav.classList.toggle("active");
+
+        hamburgerBtn.classList.toggle("active");
+        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+
+    });
+
+    mainNav.querySelectorAll(":scope > a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("active");
+            hamburgerBtn.classList.remove("active");
+            hamburgerBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+    mainNav.querySelectorAll(".mega-menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("active");
+            hamburgerBtn.classList.remove("active");
+            hamburgerBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+}
+
+// CATEGORY
 
 const categoryLinks =
 document.querySelectorAll(".category-link");
