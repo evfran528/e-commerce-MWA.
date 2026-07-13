@@ -1,14 +1,36 @@
 // ADD TO CART
-let cartCount = 0;
-
 const cartCounter = document.getElementById("cart-count");
+
+function extractProductFromCard(card) {
+
+    const name = card.dataset.name
+        || card.querySelector("h3")?.innerText.trim()
+        || "Product";
+
+    const priceText = card.dataset.price
+        || card.querySelector(".price, .price-now")?.innerText.replace(/[^0-9.]/g, "")
+        || "0";
+
+    return {
+        id: card.dataset.id || name.toLowerCase().replace(/\s+/g, "-"),
+        name: name,
+        brandLabel: card.dataset.brand || "MWA",
+        price: parseFloat(priceText) || 0,
+        img: card.dataset.img || card.querySelector("img")?.src || ""
+    };
+
+}
 
 document.querySelectorAll(".product-card button").forEach(button => {
 
     button.addEventListener("click", () => {
-        cartCount++;
-        cartCounter.textContent = cartCount;
-        cartCounter.style.display = "flex";
+
+        const card = button.closest(".product-card");
+        const product = extractProductFromCard(card);
+        const size = card.dataset.size || "One Size";
+
+        CartStore.addItem(product, size);
+
         showNotification("Product added to cart!");
 
     });
@@ -51,35 +73,39 @@ function showNotification(message){
 
 const form = document.getElementById("newsletter-form");
 
-form.addEventListener("submit", function(e){
+if (form) {
 
-    e.preventDefault();
+    form.addEventListener("submit", function(e){
 
-    const email = form.querySelector("input");
+        e.preventDefault();
 
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const email = form.querySelector("input");
 
-    if(email.value.trim() === ""){
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        alert("Please enter your email.");
+        if(email.value.trim() === ""){
 
-        return;
+            alert("Please enter your email.");
 
-    }
+            return;
 
-    if(!emailPattern.test(email.value)){
+        }
 
-        alert("Please enter a valid email.");
+        if(!emailPattern.test(email.value)){
 
-        return;
+            alert("Please enter a valid email.");
 
-    }
+            return;
 
-    alert("Thank you for subscribing!");
+        }
 
-    form.reset();
+        alert("Thank you for subscribing!");
 
-});
+        form.reset();
+
+    });
+
+}
 
 // SMOOTH SCROLL
 
@@ -117,6 +143,8 @@ window.addEventListener("scroll",()=>{
 
     const header = document.querySelector("header");
 
+    if(!header) return;
+
     if(window.scrollY > 50){
 
         header.style.boxShadow="0 5px 20px rgba(0,0,0,.15)";
@@ -135,31 +163,54 @@ window.addEventListener("scroll",()=>{
 
 const slideButton = document.querySelector(".slide button");
 
-slideButton.addEventListener("click",()=>{
+if (slideButton) {
 
-    document.querySelector(".featured").scrollIntoView({
+    slideButton.addEventListener("click",()=>{
 
-        behavior:"smooth"
+        window.location.href = "shop.html";
 
     });
 
-});
+}
+
+// HERO BACKGROUND SLIDESHOW
+
+const slideBgItems = document.querySelectorAll(".slide-bg-item");
+let slideBgIndex = 0;
+
+if (slideBgItems.length > 1) {
+
+    setInterval(() => {
+
+        slideBgItems[slideBgIndex].classList.remove("active");
+
+        slideBgIndex = (slideBgIndex + 1) % slideBgItems.length;
+
+        slideBgItems[slideBgIndex].classList.add("active");
+
+    }, 4000);
+
+}
 
 // cart ICON
 
 const heart = document.querySelector(".fa-heart");
 
-heart.addEventListener("click",()=>{
+if (heart) {
 
-    heart.classList.toggle("fa-solid");
+    heart.addEventListener("click",()=>{
 
-    heart.classList.toggle("fa-regular");
+        heart.classList.toggle("fa-solid");
 
-    heart.style.color = heart.classList.contains("fa-solid")
-        ? "red"
-        : "";
+        heart.classList.toggle("fa-regular");
 
-});
+        heart.style.color = heart.classList.contains("fa-solid")
+            ? "red"
+            : "";
+
+    });
+
+}
 
 // SEARCH ICON
 // SEARCH PRODUCTS
@@ -177,7 +228,7 @@ function searchProduct(){
 
     products.forEach(product=>{
 
-        const name = product.querySelector("h3").innerText.toLowerCase();
+        const name = product.querySelector("h3")?.innerText.toLowerCase() || "";
 
         if(name.includes(keyword)){
 
@@ -231,7 +282,7 @@ document.querySelectorAll(".category-card").forEach(card=>{
 
     card.addEventListener("click",()=>{
 
-        const category = card.querySelector("h3").innerText;
+        const category = card.querySelector("h3")?.innerText || "This";
 
         showNotification(category + " Collection");
 
@@ -282,98 +333,143 @@ document.querySelectorAll("section").forEach(section=>{
 });
 
 
-// FEATURED CAROUSEL
+// CAROUSEL
 
 const productSlider = document.querySelector(".products");
 const nextBtn = document.querySelector(".next");
 const prevBtn = document.querySelector(".prev");
 
-const originalCards = [...document.querySelectorAll(".product-card")];
+if (productSlider && nextBtn && prevBtn) {
 
-originalCards.forEach(card => {
-    productSlider.appendChild(card.cloneNode(true));
-});
+    const originalCards = [...document.querySelectorAll(".product-card")];
 
-const cards = document.querySelectorAll(".product-card");
+    originalCards.forEach(card => {
+        productSlider.appendChild(card.cloneNode(true));
+    });
 
-let currentIndex = 0;
-const gap = 25;
+    let currentIndex = 0;
+    const gap = 25;
 
-function updateCarousel() {
-    const cardWidth = originalCards[0].offsetWidth + gap;
+    function updateCarousel() {
+        const cardWidth = originalCards[0].offsetWidth + gap;
 
-    productSlider.style.transition = "transform .5s ease";
-    productSlider.style.transform =
-        `translateX(-${currentIndex * cardWidth}px)`;
-}
+        productSlider.style.transition = "transform .5s ease";
+        productSlider.style.transform =
+            `translateX(-${currentIndex * cardWidth}px)`;
+    }
 
-// NEXT
-nextBtn.addEventListener("click", () => {
+    // NEXT
+    nextBtn.addEventListener("click", () => {
 
-    currentIndex++;
-    updateCarousel();
-
-});
-
-// PREVIOUS
-prevBtn.addEventListener("click", () => {
-
-    if(currentIndex > 0){
-        currentIndex--;
+        currentIndex++;
         updateCarousel();
-    }
 
-});
+    });
 
-// AUTO SLIDE
-setInterval(() => {
+    // PREVIOUS
+    prevBtn.addEventListener("click", () => {
 
-    currentIndex++;
+        if(currentIndex > 0){
+            currentIndex--;
+            updateCarousel();
+        }
 
+    });
+
+    // AUTO SLIDE
+    setInterval(() => {
+
+        currentIndex++;
+
+        updateCarousel();
+
+        //  cloned cards
+        if(currentIndex >= originalCards.length){
+
+            setTimeout(() => {
+
+                productSlider.style.transition = "none";
+                currentIndex = 0;
+
+                const cardWidth = originalCards[0].offsetWidth + gap;
+
+                productSlider.style.transform =
+                    `translateX(-${currentIndex * cardWidth}px)`;
+
+            },500);
+
+        }
+
+    },3000);
+
+    window.addEventListener("resize", updateCarousel);
     updateCarousel();
 
-    //  cloned cards
-    if(currentIndex >= originalCards.length){
-
-        setTimeout(() => {
-
-            productSlider.style.transition = "none";
-            currentIndex = 0;
-
-            const cardWidth = originalCards[0].offsetWidth + gap;
-
-            productSlider.style.transform =
-                `translateX(-${currentIndex * cardWidth}px)`;
-
-        },500);
-
-    }
-
-},3000);
-
-window.addEventListener("resize", updateCarousel);
-updateCarousel();
+}
 
 //drop down
 
 const dropdown = document.querySelector(".dropdown > a");
 
-dropdown.addEventListener("click", function(e){
+if (dropdown) {
 
-    if(window.innerWidth <= 768){
+    dropdown.addEventListener("click", function(e){
 
-        e.preventDefault();
+        if(window.innerWidth <= 768){
 
-        document
-            .querySelector(".mega-menu")
-            .classList.toggle("active");
+            e.preventDefault();
 
-    }
+            document
+                .querySelector(".mega-menu")
+                .classList.toggle("active");
 
-});
+        }
 
-window.addEventListener("resize", updateCarousel);
-updateCarousel();
+    });
+
+}
+
+// HAMBURGER MENU TOGGLE
+
+const hamburgerBtn = document.getElementById("hamburgerBtn");
+const mainNav = document.getElementById("mainNav");
+
+if (hamburgerBtn && mainNav) {
+
+    hamburgerBtn.addEventListener("click", () => {
+
+        const isOpen = mainNav.classList.toggle("active");
+
+        hamburgerBtn.classList.toggle("active");
+        hamburgerBtn.setAttribute("aria-expanded", isOpen);
+
+    });
+
+    mainNav.querySelectorAll(":scope > a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("active");
+            hamburgerBtn.classList.remove("active");
+            hamburgerBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+    mainNav.querySelectorAll(".mega-menu a").forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            mainNav.classList.remove("active");
+            hamburgerBtn.classList.remove("active");
+            hamburgerBtn.setAttribute("aria-expanded", "false");
+
+        });
+
+    });
+
+}
 
 // CATEGORY LINK HOVER EFFECT
 
@@ -406,29 +502,7 @@ categoryLinks.forEach(link => {
 
 });
 
+
+// CONSOLE
+
 console.log("MWA Clothing Website Loaded Successfully");
-// TEAM MEMBER CARDS
-const teamContainer = document.querySelector(".team-container");
-const cards = document.querySelectorAll(".member-card");
-
-// Remove active class from all cards
-function removeActive() {
-    cards.forEach(card => card.classList.remove("active"));
-}
-
-// Expand hovered card
-cards.forEach(card => {
-    card.addEventListener("mouseenter", () => {
-        removeActive();
-        card.classList.add("active");
-    });
-});
-
-// Return to third member when mouse leaves
-teamContainer.addEventListener("mouseleave", () => {
-    removeActive();
-    // Third member expands again
-    cards[2].classList.add("active");
-
-});
-
