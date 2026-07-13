@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         3:{
             image:"yvan.png",
-            name:"Justin Gabriel Gojar",
+            name:"Jeff Yvan Pasion",
             role:"UI / UX Designer",
             description:"Designs modern interfaces and user-friendly experiences.",
             skills:["C++","JavaScript","HTML","CSS"]
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         4:{
             image:"images/member4.jpg",
-            name:"Jeff Yvan Pasion",
+            name:"Justin Gabriel Gojar",
             role:"Project Manager",
             description:"Leads the team and ensures successful project completion.",
             skills:["Leadership","Planning","Communication","Documentation"]
