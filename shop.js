@@ -188,82 +188,82 @@ const PRODUCTS = [
     /* ---------- NIKE ---------- */
 
     // Men
-    { id: 1, name: "Tech Fleece Pullover Hoodie", brand: "nike", brandLabel: "Nike", category: "men", type: "hoodie", price: 68.0, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 2, name: "Track Jogger Pants", brand: "nike", brandLabel: "Nike", category: "men", type: "pants", price: 62.0, was: 78.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 3, name: "Flex Running Shorts", brand: "nike", brandLabel: "Nike", category: "men", type: "shorts", price: 32.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 4, name: "Dri-Fit Training Tee", brand: "nike", brandLabel: "Nike", category: "men", type: "tshirt", price: 34.0, was: null, img: "images/shirt.jpg", badge: null, isNew: true },
+    { id: 1, name: "Tech Fleece Pullover Hoodie", brand: "nike", brandLabel: "Nike", category: "men", type: "hoodie", price: 68.0, was: null, img: "../nike/Tech Fleece Pullover Hoodie.jpg", badge: null, isNew: false },
+    { id: 2, name: "Nike Tech Fleece Track Pants", brand: "nike", brandLabel: "Nike", category: "men", type: "pants", price: 62.0, was: 78.0, img: "../nike/Nike Tech Fleece Track Pants.jpg", badge: "Sale", isNew: false },
+    { id: 3, name: "Nike Flex Stride Shorts", brand: "nike", brandLabel: "Nike", category: "men", type: "shorts", price: 32.0, was: null, img: "../nike/Nike Flex Stride.jpg", badge: null, isNew: false },
+    { id: 4, name: "Dri-Fit Training Tee", brand: "nike", brandLabel: "Nike", category: "men", type: "tshirt", price: 34.0, was: null, img: "../nike/Dri-Fit Training Tee.jpg", badge: null, isNew: true },
 
     // Women
-    { id: 5, name: "Essential Wrap Dress", brand: "nike", brandLabel: "Nike", category: "women", type: "dress", price: 72.0, was: null, img: "images/product1.png", badge: "New", isNew: true },
-    { id: 6, name: "High-Rise Training Pants", brand: "nike", brandLabel: "Nike", category: "women", type: "pants", price: 55.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 7, name: "City Ready Shorts", brand: "nike", brandLabel: "Nike", category: "women", type: "shorts", price: 30.0, was: 38.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 8, name: "Sportswear Crop Tee", brand: "nike", brandLabel: "Nike", category: "women", type: "tshirt", price: 29.0, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
+    { id: 5, name: "Women's Dri-FIT Dress", brand: "nike", brandLabel: "Nike", category: "women", type: "dress", price: 72.0, was: null, img: "../nike/Women's Dri-FIT Dress.jpg", badge: "New", isNew: true },
+    { id: 6, name: "Women's Dri-FIT High-Rise Joggers", brand: "nike", brandLabel: "Nike", category: "women", type: "pants", price: 55.0, was: null, img: "../nike/Women's Dri-FIT High-Rise Joggers.jpg", badge: null, isNew: false },
+    { id: 7, name: "City Ready Shorts", brand: "nike", brandLabel: "Nike", category: "women", type: "shorts", price: 30.0, was: 38.0, img: "../nike/City Ready Shorts.jpg", badge: "Sale", isNew: false },
+    { id: 8, name: "Sportswear Crop Tee", brand: "nike", brandLabel: "Nike", category: "women", type: "tshirt", price: 29.0, was: null, img: "../nike/Sportswear Crop Tee.jpg", badge: null, isNew: false },
 
     // Kids
-    { id: 9, name: "Kids Fleece Hoodie", brand: "nike", brandLabel: "Nike", category: "kids", type: "hoodie", price: 38.0, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 10, name: "Kids Jogger Pants", brand: "nike", brandLabel: "Nike", category: "kids", type: "pants", price: 30.0, was: 38.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 11, name: "Kids Active Shorts", brand: "nike", brandLabel: "Nike", category: "kids", type: "shorts", price: 22.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 12, name: "Kids Graphic Tee", brand: "nike", brandLabel: "Nike", category: "kids", type: "tshirt", price: 20.0, was: null, img: "images/shirt.jpg", badge: "New", isNew: true },
+    { id: 9, name: "Kids Fleece Hoodie", brand: "nike", brandLabel: "Nike", category: "kids", type: "hoodie", price: 38.0, was: null, img: "../nike/Kids Fleece Hoodie.jpg", badge: null, isNew: false },
+    { id: 10, name: "Kids' Fleece Joggers", brand: "nike", brandLabel: "Nike", category: "kids", type: "pants", price: 30.0, was: 38.0, img: "../nike/Fleece Joggers Kids.png", badge: "Sale", isNew: false },
+    { id: 11, name: "Kids Active Shorts", brand: "nike", brandLabel: "Nike", category: "kids", type: "shorts", price: 22.0, was: null, img: "../nike/Kids Active Shorts.jpg", badge: null, isNew: false },
+    { id: 12, name: "Kids Graphic Tee", brand: "nike", brandLabel: "Nike", category: "kids", type: "tshirt", price: 20.0, was: null, img: "../nike/Kids Graphic Tee.jpg", badge: "New", isNew: true },
 
     /* ---------- ADIDAS ---------- */
 
     // Men
-    { id: 13, name: "Essentials Hoodie", brand: "adidas", brandLabel: "Adidas", category: "men", type: "hoodie", price: 60.0, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 14, name: "Tiro Track Pants", brand: "adidas", brandLabel: "Adidas", category: "men", type: "pants", price: 58.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 15, name: "3-Stripe Shorts", brand: "adidas", brandLabel: "Adidas", category: "men", type: "shorts", price: 28.0, was: 35.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 16, name: "Adicolor Tee", brand: "adidas", brandLabel: "Adidas", category: "men", type: "tshirt", price: 25.0, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
+    { id: 13, name: "FOG X ADIDAS Hoodie", brand: "adidas", brandLabel: "Adidas", category: "men", type: "hoodie", price: 60.0, was: null, img: "../adidas/FOG X ADIDAS.jpg", badge: null, isNew: false },
+    { id: 14, name: "Tiro Track Pants", brand: "adidas", brandLabel: "Adidas", category: "men", type: "pants", price: 58.0, was: null, img: "../adidas/Tiro Track Pants.jpg", badge: null, isNew: false },
+    { id: 15, name: "3-Stripe Shorts", brand: "adidas", brandLabel: "Adidas", category: "men", type: "shorts", price: 28.0, was: 35.0, img: "../adidas/3-Stripe Shorts.jpg", badge: "Sale", isNew: false },
+    { id: 16, name: "Adicolor Tee", brand: "adidas", brandLabel: "Adidas", category: "men", type: "tshirt", price: 25.0, was: null, img: "../adidas/Adicolor Tee.jpg", badge: null, isNew: false },
 
     // Women
-    { id: 17, name: "Firebird Wrap Dress", brand: "adidas", brandLabel: "Adidas", category: "women", type: "dress", price: 66.0, was: null, img: "images/product2.png", badge: "New", isNew: true },
-    { id: 18, name: "Believe This Leggings", brand: "adidas", brandLabel: "Adidas", category: "women", type: "pants", price: 50.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 19, name: "Run Shorts", brand: "adidas", brandLabel: "Adidas", category: "women", type: "shorts", price: 27.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 20, name: "Trefoil Crop Tee", brand: "adidas", brandLabel: "Adidas", category: "women", type: "tshirt", price: 24.0, was: 30.0, img: "images/shirt.jpg", badge: "Sale", isNew: false },
+    { id: 17, name: "Firebird Wrap Dress", brand: "adidas", brandLabel: "Adidas", category: "women", type: "dress", price: 66.0, was: null, img: "../adidas/Firebird Wrap Dress.jpg", badge: "New", isNew: true },
+    { id: 18, name: "Believe This Leggings", brand: "adidas", brandLabel: "Adidas", category: "women", type: "pants", price: 50.0, was: null, img: "../adidas/Believe This Leggings.jpg", badge: null, isNew: false },
+    { id: 19, name: "Run Shorts", brand: "adidas", brandLabel: "Adidas", category: "women", type: "shorts", price: 27.0, was: null, img: "../adidas/Run Shorts.jpg", badge: null, isNew: false },
+    { id: 20, name: "Trefoil Crop Tee", brand: "adidas", brandLabel: "Adidas", category: "women", type: "tshirt", price: 24.0, was: 30.0, img: "../adidas/Trefoil Crop Tee.jpg", badge: "Sale", isNew: false },
 
     // Kids
-    { id: 21, name: "Kids Essentials Hoodie", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "hoodie", price: 34.0, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 22, name: "Kids Track Pants", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "pants", price: 28.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 23, name: "Kids 3-Stripe Shorts", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "shorts", price: 20.0, was: 26.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 24, name: "Kids Trefoil Tee", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "tshirt", price: 18.0, was: null, img: "images/shirt.jpg", badge: "New", isNew: true },
+    { id: 21, name: "Kids FOG X ADIDAS Hoodie", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "hoodie", price: 34.0, was: null, img: "../adidas/FOG X ADIDAS kids Hoodie.jpg", badge: null, isNew: false },
+    { id: 22, name: "Kids Track Pants", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "pants", price: 28.0, was: null, img: "../adidas/Kids Track Pants.jpg", badge: null, isNew: false },
+    { id: 23, name: "Kids FOG X ADIDAS Short", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "shorts", price: 20.0, was: 26.0, img: "../adidas/Kids FOG X ADIDAS short.jpg", badge: "Sale", isNew: false },
+    { id: 24, name: "Kids Trefoil Tee", brand: "adidas", brandLabel: "Adidas", category: "kids", type: "tshirt", price: 18.0, was: null, img: "../adidas/Kids Trefoil Tee.jpg", badge: "New", isNew: true },
 
     /* ---------- UNIQLO ---------- */
 
     // Men
-    { id: 25, name: "Fleece Full-Zip Hoodie", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "hoodie", price: 39.9, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 26, name: "Wide Fit Jogger Pants", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "pants", price: 39.9, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 27, name: "Dry-Ex Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "shorts", price: 19.9, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 28, name: "U Crew Neck Tee", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "tshirt", price: 19.9, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
+    { id: 25, name: "Fleece Full-Zip Hoodie", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "hoodie", price: 39.9, was: null, img: "../uniqlo/Fleece Full-Zip Hoodie.jpg", badge: null, isNew: false },
+    { id: 26, name: "Linen Blend Easy Ankle Pants", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "pants", price: 39.9, was: null, img: "../uniqlo/Linen Blend Easy Ankle Pants.jpg", badge: null, isNew: false },
+    { id: 27, name: "Dry-Ex Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "shorts", price: 19.9, was: null, img: "../uniqlo/Dry-Ex Shorts.jpg", badge: null, isNew: false },
+    { id: 28, name: "AIRism Cotton Oversized T-Shirt", brand: "uniqlo", brandLabel: "Uniqlo", category: "men", type: "tshirt", price: 19.9, was: null, img: "../uniqlo/AIRism Cotton Oversized T-Shirt.jpg", badge: null, isNew: false },
 
     // Women
-    { id: 29, name: "Linen Blend Dress", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "dress", price: 39.9, was: null, img: "images/product4.png", badge: "New", isNew: true },
-    { id: 30, name: "Relaxed Fit Trousers", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "pants", price: 34.9, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 31, name: "Cotton Blend Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "shorts", price: 17.9, was: 22.9, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 32, name: "Cotton Crew Tee", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "tshirt", price: 14.9, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
+    { id: 29, name: "Linen Blend Dress", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "dress", price: 39.9, was: null, img: "../uniqlo/Linen Blend Dress.jpg", badge: "New", isNew: true },
+    { id: 30, name: "Linen Cotton Tapered Pants", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "pants", price: 34.9, was: null, img: "../uniqlo/Linen Cotton Tapered Pants.jpg", badge: null, isNew: false },
+    { id: 31, name: "Linen Cotton Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "shorts", price: 17.9, was: 22.9, img: "../uniqlo/Linen Cotton Shorts.jpg", badge: "Sale", isNew: false },
+    { id: 32, name: "Boat Neck T-Shirt", brand: "uniqlo", brandLabel: "Uniqlo", category: "women", type: "tshirt", price: 14.9, was: null, img: "../uniqlo/Boat Neck T-Shirt.jpg", badge: null, isNew: false },
 
     // Kids
-    { id: 33, name: "Kids Fleece Hoodie", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "hoodie", price: 24.9, was: null, img: "images/hoodie.jpg", badge: null, isNew: false },
-    { id: 34, name: "Kids Jersey Pants", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "pants", price: 19.9, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 35, name: "Kids Sweat Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "shorts", price: 14.9, was: 18.9, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 36, name: "Kids Crew Tee", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "tshirt", price: 12.9, was: null, img: "images/shirt.jpg", badge: "New", isNew: true },
+    { id: 33, name: "Kids Dry Sweat Full-Zip Hoodie", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "hoodie", price: 24.9, was: null, img: "../uniqlo/Kids Dry Sweat Full-Zip Hoodie.jpg", badge: null, isNew: false },
+    { id: 34, name: "Kids Jersey Pants", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "pants", price: 19.9, was: null, img: "../uniqlo/Kids Jersey Pants.jpg", badge: null, isNew: false },
+    { id: 35, name: "KIDS Baggy Cargo Shorts", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "shorts", price: 14.9, was: 18.9, img: "../uniqlo/Kids Baggy Cargo Shorts.jpg", badge: "Sale", isNew: false },
+    { id: 36, name: "Kids Crew Tee", brand: "uniqlo", brandLabel: "Uniqlo", category: "kids", type: "tshirt", price: 12.9, was: null, img: "../uniqlo/Kids Crew Tee.jpg", badge: "New", isNew: true },
 
     /* ---------- RICHBOYZ ---------- */
 
     // Men
-    { id: 37, name: "Oversized Hoodie", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "hoodie", price: 58.0, was: null, img: "./images/prod1.jpg", badge: "New", isNew: true },
-    { id: 38, name: "Street Cargo Pants", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "pants", price: 65.0, was: 80.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
-    { id: 39, name: "Boxy Fit Tee", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "tshirt", price: 30.0, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
-    { id: 40, name: "Logo Mesh Shorts", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "shorts", price: 34.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
+    { id: 37, name: "Airy Quarter Zip Hoodie", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "hoodie", price: 58.0, was: null, img: "../Richboyz/Airy Quarter Zip Hoodie.jpg", badge: "New", isNew: true },
+    { id: 38, name: "Pleated Lounge Pants", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "pants", price: 65.0, was: 80.0, img: "../Richboyz/Pleated Lounge Pants.jpg", badge: "Sale", isNew: false },
+    { id: 39, name: "Boxy Fit Tee", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "tshirt", price: 30.0, was: null, img: "../Richboyz/Boxy Fit Tee.jpg", badge: null, isNew: false },
+    { id: 40, name: "Traverse Shorts", brand: "richboyz", brandLabel: "RichBoyz", category: "men", type: "shorts", price: 34.0, was: null, img: "../Richboyz/Traverse Shorts.jpg", badge: null, isNew: false },
 
     // Women
-    { id: 41, name: "Signature Crop Top", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "top", price: 42.0, was: null, img: "images/product2.png", badge: null, isNew: true },
-    { id: 42, name: "Boyfriend Shirt Dress", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "dress", price: 52.0, was: 68.0, img: "images/product2.png", badge: "Sale", isNew: false },
-    { id: 43, name: "High-Waist Wide Pants", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "pants", price: 48.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 44, name: "Ribbed Bike Shorts", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "shorts", price: 26.0, was: 32.0, img: "images/jeans.jpg", badge: "Sale", isNew: false },
+    { id: 41, name: "SIGNATUBE", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "top", price: 42.0, was: null, img: "../Richboyz/SIGNATUBE.jpg", badge: null, isNew: true },
+    { id: 42, name: "Knit Shirt Dress", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "dress", price: 52.0, was: 68.0, img: "../Richboyz/Knit Shirt Dress.jpg", badge: "Sale", isNew: false },
+    { id: 43, name: "PIXIE SKIRT", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "pants", price: 48.0, was: null, img: "../Richboyz/PIXIE SKIRT.jpg", badge: null, isNew: false },
+    { id: 44, name: "Mini Waffle Shorts", brand: "richboyz", brandLabel: "RichBoyz", category: "women", type: "shorts", price: 36.0, was: null, img: "../Richboyz/Mini Waffle Shorts.jpg", badge: "New", isNew: true },
 
     // Kids
-    { id: 45, name: "Mini Logo Tee", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "tshirt", price: 26.0, was: null, img: "images/shirt.jpg", badge: null, isNew: false },
-    { id: 46, name: "Kids Oversized Hoodie", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "hoodie", price: 36.0, was: null, img: "images/hoodie.jpg", badge: "New", isNew: true },
-    { id: 47, name: "Kids Cargo Pants", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "pants", price: 32.0, was: null, img: "images/jeans.jpg", badge: null, isNew: false },
-    { id: 48, name: "Kids Logo Shorts", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "shorts", price: 18.0, was: 24.0, img: "images/jeans.jpg", badge: "Sale", isNew: false }
+    { id: 45, name: "Box Tee", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "tshirt", price: 26.0, was: null, img: "../Richboyz/Box Tee.jpg", badge: null, isNew: false },
+    { id: 46, name: "Kids Oversized Hoodie", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "hoodie", price: 36.0, was: null, img: "../Richboyz/Kids Oversized Hoodie.jpg", badge: "New", isNew: true },
+    { id: 47, name: "Kidz SweatPants", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "pants", price: 32.0, was: null, img: "../Richboyz/Kidz SweatPants.jpg", badge: null, isNew: false },
+    { id: 48, name: "Kidz SweatShorts", brand: "richboyz", brandLabel: "RichBoyz", category: "kids", type: "shorts", price: 18.0, was: 24.0, img: "../Richboyz/Kidz SweatShorts.jpg", badge: "Sale", isNew: false }
 
 ];
 
