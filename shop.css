@@ -1108,6 +1108,41 @@
     background:#d6336c;
 }
 
+
+.follow-section{
+    display:flex;
+    flex-direction:column;
+}
+
+.social-app{
+    display:flex;
+    align-items:center;
+    gap:25px;
+    white-space:nowrap;
+}
+
+/* Social icons */
+.social-icons{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+
+/* Icon size */
+.social-icons a,
+.app-icons a{
+    color:#d9d9d9;
+    font-size:22px;
+    transition:.3s;
+}
+
+.social-icons a:hover {
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+
 @media (max-width:640px){
     .qv-content{
         grid-template-columns:1fr;
