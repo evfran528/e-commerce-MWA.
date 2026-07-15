@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="../css/home.css">
+   <link rel="stylesheet" href="../css/contact.css">
+     <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>404 | Garments</title>
+</head>
+<body>
+
+<header>
+
+  <div class="left">
+
+        <a href="home.html" class="logo">
+            404<span class="logo-dot">.</span>
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="home.html">Home</a>
+
+            <div class="dropdown">
+
+                <a href="#">Categories ▾</a>
+
+                <div class="mega-menu">
+
+                    <div class="menu-left">
+
+                                
+                        <a href="shop.html?category=men" class="category-link active" data-target="men-products">Men</a>
+                        <a href="shop.html?category=women" class="category-link" data-target="women-products">Women</a>
+                        <a href="shop.html?category=kids" class="category-link" data-target="kids-products">Kids</a>
+
+                    </div>
+
+                    <div class="menu-right">
+
+                        <!-- MEN -->
+                        <div id="men-products" class="product-group active">
+                            <div class="menu-card">
+                                <a href="shop.html?category=men"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=nike"><img src="../images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=richboyz"><img src="../images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Kids -->
+                        <div id="kids-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=nike"><img src="../images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=richboyz"><img src="../images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- WOMEN -->
+                        <div id="women-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=women"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=nike"><img src="../images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=richboyz"><img src="../images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <a href="shop.html">Shop</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contact.html" style="color:#d6336c;">Contact</a>
+
+
+        </nav>
+    </div>
+
+    <!--  search  -->
+
+   <div class="center">
+
+        <div class="search-box">
+
+             <input
+        id="searchInput"
+        type="text"
+        placeholder="Search Clothes...">
+
+           <button id="searchBtn">
+        <img src="../images/sirch.png">
+    </button>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <i class="far fa-heart"></i>
+
+        <div class="cart" id="cartTrigger">
+            <img src="../images/addto.png" id="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+
+    </div>
+
+</header>
+
+<section class="contact-hero slide">
+    <div class="slide-bg">
+        <div class="slide-bg-item active" style="background-image: url('../images/slide5.png');"></div>
+    </div>
+
+    <div class="slide-content">
+        <h1>LET'S TALK</h1>
+        <p>Have a question about fits, shipping, or a custom order? We’d love to hear from you.</p>
+        <button id="heroBtn">CONTACT US</button>
+    </div>
+</section>
+
+<section class="contact-section" id="contact">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p>We’re here to help with styling advice, orders, and anything else you need.</p>
+
+            <div class="info">
+                <div class="box">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Visit us</h4>
+                        <span>123 Fashion Street, Manila, Philippines</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Call us</h4>
+                        <span>+63 912 345 6789</span>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Email us</h4>
+                        <span>hello@404garments.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-socials">
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Send a message</h3>
+            <form id="contactForm">
+                <div class="input-box">
+                    <input type="text" name="name" required>
+                    <label>Your Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label>Your Email</label>
+                </div>
+
+                <div class="input-box">
+                    <textarea name="message" required></textarea>
+                    <label>Your Message</label>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="map">
+    <h3>Find us here</h3>
+    <iframe src="https://www.google.com/maps?q=Manila%20Philippines&z=13&output=embed"></iframe>
+</section>
+
+<section class="faq">
+    <div class="faq-container">
+        <div class="faq-item active">
+            <div class="question">How long does shipping take? <i class="fa-solid fa-plus"></i></div>
+            <div class="answer">Standard shipping usually takes 3–5 business days within Metro Manila and 5–7 days for provincial areas.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Do you offer exchanges? <i class="fa-solid fa-plus"></i></div>
+            <div class="answer">Yes, exchanges are available within 7 days for unworn items with original tags and packaging.</div>
+        </div>
+        <div class="faq-item">
+            <div class="question">Can I order for a bulk event? <i class="fa-solid fa-plus"></i></div>
+            <div class="answer">Absolutely. Contact our team for custom orders, team uniforms, and event apparel.</div>
+        </div>
+    </div>
+</section>
+
+<div class="message-success-overlay" id="messageSuccessOverlay">
+    <div class="message-success-box">
+        <button class="message-success-close" id="messageSuccessCloseBtn" aria-label="Close">&times;</button>
+        <h3>Message sent!</h3>
+        <p>Thanks for reaching out. We’ll get back to you shortly.</p>
+    </div>
+</div>
+
+<!--  FOOTER -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <a href="home.html" class="logo">
+        404<span class="logo-dot">.</span>
+    </a>
+
+            <p>Streetwear Fashion Store</p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a><br>
+            <a href="shop.html">Shop</a><br>
+            <a href="aboutus.html">About Us</a><br>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="footer-follow">
+
+            <h3>Follow Us</h3>
+
+            <div class="follow-section">
+
+                <div class="social-app">
+
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" title="Facebook" rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://x.com/" target="_blank" title="Twitter" rel="noopener noreferrer">
+                            <i class="fab fa-x-twitter" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/" target="_blank" title="YouTube" rel="noopener noreferrer">
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="https://www.pinterest.com/" target="_blank" title="Pinterest" rel="noopener noreferrer">
+                            <i class="fab fa-pinterest-p" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 404 GARMENTS | CLOTHING
+    </p>
+</footer>
+
+<!--  CART MODAL  -->
+
+<div class="modal-overlay" id="cartOverlay">
+    <div class="modal-box cart-box">
+        <button class="modal-close" id="cartClose" aria-label="Close">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div class="cart-items" id="cartItems"></div>
+        <p class="cart-empty" id="cartEmptyMsg" hidden>Your cart is empty.</p>
+
+        <div class="cart-summary">
+            <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!--  CHECKOUT MODAL  -->
+
+<div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal-box checkout-box">
+        <button class="modal-close" id="checkoutClose" aria-label="Close">&times;</button>
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm">
+
+            <label class="ck-field">
+                Full Name
+                <input type="text" id="ckName" required placeholder="Juan Dela Cruz">
+            </label>
+
+            <label class="ck-field">
+                Delivery Address
+                <textarea id="ckAddress" required placeholder="House No., Street, Barangay, City"></textarea>
+            </label>
+
+            <label class="ck-field">
+                Contact Number
+                <input type="tel" id="ckPhone" required placeholder="09xx xxx xxxx">
+            </label>
+
+            <div class="payment-options">
+                <span class="qv-size-label">Payment Method</span>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="cod" checked>
+                    Cash on Delivery
+                </label>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="online">
+                    Online Payment
+                </label>
+            </div>
+
+            <div class="checkout-total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+
+        </form>
+    </div>
+</div>
+
+<!--  ORDER SUCCESS  -->
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+        <div class="success-icon">&#10003;</div>
+        <h2>Order Placed Successfully!</h2>
+        <p id="successMsg">Thank you for shopping with 404 Garments.</p>
+        <button class="success-close-btn" id="successCloseBtn">Continue Shopping</button>
+    </div>
+</div>
+
+<script src="../js/cart.js"></script>
+<script src="../js/cart-ui.js"></script>
+<script src="../js/contact.js"></script>
+
+
+</body>
+</html>

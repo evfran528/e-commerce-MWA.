@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/aboutus.css">
+    <link rel="stylesheet" href="../css/modals.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>404 Garments | About Us</title>
+</head>  
+<body>
+
+    <header>
+      <div class="left">
+
+        <a href="home.html" class="logo">
+            404<span class="logo-dot">.</span>
+        </a>
+
+        <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="mainNav">
+            <a href="home.html">Home</a>
+
+            <div class="dropdown">
+
+                <a href="#">Categories ▾</a>
+
+                <div class="mega-menu">
+
+                    <div class="menu-left">
+
+                        <a href="shop.html?category=men" class="category-link active" data-target="men-products">Men</a>
+                        <a href="shop.html?category=women" class="category-link" data-target="women-products">Women</a>
+                        <a href="shop.html?category=kids" class="category-link" data-target="kids-products">Kids</a>
+
+                    </div>
+
+                    <div class="menu-right">
+
+                        <!-- MEN -->
+                        <div id="men-products" class="product-group active">
+                            <div class="menu-card">
+                                <a href="shop.html?category=men"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=nike"><img src="../images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=richboyz"><img src="../images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=men&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- Kids -->
+                        <div id="kids-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=nike"><img src="../images/nikeBrandlogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=richboyz"><img src="../images/richboyzLogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=kids&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                        <!-- WOMEN -->
+                        <div id="women-products" class="product-group">
+                            <div class="menu-card">
+                                <a href="shop.html?category=women"><img src="../images/addto.png"><span>View All</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=nike"><img src="../images/nikeBrandLogo.png"><span>Nike</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=richboyz"><img src="../images/richboyzlogo.png"><span>Richboyz</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=adidas"><img src="../images/adidaslogo.jpg"><span>adidas</span></a>
+                            </div>
+                            <div class="menu-card">
+                                <a href="shop.html?category=women&brand=uniqlo"><img src="../images/uniqlologo.png"><span>Uniqlo</span></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <a href="shop.html">Shop</a>
+            <a href="aboutus.html" style="color:#d6336c;">About Us</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+    </div>
+
+    <!--  search  -->
+
+   <div class="center">
+        <div class="search-box">
+
+        <input
+        id="searchInput"
+        type="text"
+        placeholder="Search Clothes...">
+
+        <button id="searchBtn">
+            <img src="../images/sirch.png">
+        </button>
+
+        </div>
+    </div>
+
+    <div class="right">
+        <i class="far fa-heart"></i>
+        <div class="cart" id="cartTrigger">
+            <img src="../images/addto.png" id="cart-icon">
+            <span id="cart-count">0</span>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <span>ABOUT 404 GARMENTS</span>
+            <h1>Lost in Code. Found in Style.</h1>
+
+            <p>
+                At 404 Garments, we redefine what "404 Not Found" means. Inspired by the
+                iconic coding error and created by a team of four, our brand represents
+                discovering your own identity through streetwear. Every piece is designed
+                to blend urban culture, confidence, and individuality, empowering you to
+                stand out instead of blending in. We don't just create clothing—we create
+                statements that help you express who you are with every outfit.
+            </p>
+
+            <a href="shop.html" class="btn">Explore Collection</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="../images/pic1.png" alt="Girl">
+        </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="story">
+        <div class="story-image">
+            <img src="../images/pic2.png" alt="Boy">
+        </div>
+        <div class="story-text">
+            <small>OUR STORY</small>
+            <h2>Lost in the Ordinary. Found in 404.</h2>
+            <p>
+                404 Garments was born from the iconic "404 Not Found" error in coding—a
+                symbol recognized by every developer. While it usually means something
+                can't be found, we give it a new meaning: finding your own identity through
+                streetwear. Inspired by our team of four creators, the name 404 represents
+                both our passion for technology and our vision of fashion without limits.
+            </p>
+            <p>
+                Every collection is designed to combine clean aesthetics, urban culture,
+                and confidence. More than clothing, 404 Garments is a statement for those
+                who refuse to blend in. We believe streetwear is a way to express who you
+                are, stand out from the crowd, and wear your individuality with pride.
+            </p>
+            <p>
+                Whether you're exploring the city, creating your next project, or chasing
+                your ambitions, 404 Garments is made for those who aren't afraid to be
+                different. Because sometimes, the best things are found where others see
+                nothing.
+           </p>
+        </div>
+    </section>
+
+   <!-- FEATURES-->
+<section class="features">
+
+    <h2>Why Customers Love Us</h2>
+
+    <div class="feature-grid">
+
+        <div class="feature">
+            <div class="feature-icon">👗</div>
+            <h3>Fast Fashion</h3>
+            <p>Fresh arrivals added regularly so there's always something new.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">💲</div>
+            <h3>Affordable Prices</h3>
+            <p>Stylish products without premium price tags.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🌎</div>
+            <h3>Worldwide Delivery</h3>
+            <p>Shipping to customers across different countries.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">❤</div>
+            <h3>Customer Focused</h3>
+            <p>Designed around your feedback and shopping experience.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Statistics -->
+
+<section class="stats-section">
+    <div class="section-title">
+        <h2>Growing Together</h2>
+        <p>Our team continues to learn, innovate, and create meaningful digital experiences.</p>
+    </div>
+
+    <div class="stats-slider">
+        <div class="stats-track">
+
+            <!-- First Set -->
+            <div class="stat-item">
+                <h2>4</h2>
+                <p>Team Members</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>1</h2>
+                <p>Capstone Project</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Dedication</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>∞</h2>
+                <p>Creativity</p>
+            </div>
+
+            <div class="stat-item">
+                <h2>4</h2>
+                <p>Team Members</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>1</h2>
+                <p>Capstone Project</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>100%</h2>
+                <p>Dedication</p>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="stat-item">
+                <h2>∞</h2>
+                <p>Creativity</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="team-section">
+    <div class="team-container">
+
+        <!-- CARD 1 -->
+        <div class="card active">
+            <img src="../images/chloe.png" alt="Member 1">
+            <div class="overlay">
+                <div class="content">
+                    <h2>Front-End Developer</h2>
+                    <a href="#" class="profile-btn" data-member="1">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <img src="../images/fran.png" alt="Member 2">
+            <div class="overlay">
+                <div class="content">
+                    <h2>Back-End Developer</h2>
+                    <a href="#" class="profile-btn" data-member="2">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <img src="../images/yvan.png" alt="Member 3">
+            <div class="overlay">
+                <div class="content">
+                    <h2>UI / UX Designer</h2>
+                    <a href="#" class="profile-btn" data-member="3">View Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <img src="../images/justin.png" alt="Member 4">
+            <div class="overlay">
+                <div class="content">
+                    <h2>Project Manager</h2>
+                    <a href="#" class="profile-btn" data-member="4">View Profile</a>
+                </div>
+            </div>
+
+        
+        </div>
+    </div>
+</section>
+
+<!-- PROFILE POPUP -->
+<div class="profile-modal" id="profileModal">
+
+    <div class="profile-box">
+
+        <span class="close-modal">&times;</span>
+
+        <img id="profileImage">
+
+        <h2 id="profileName"></h2>
+
+        <h4 id="profileRole"></h4>
+
+        <p id="profileDescription"></p>
+
+        <h3>Skills</h3>
+
+        <ul id="profileSkills"></ul>
+
+    </div>
+
+</div>
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <a href="home.html" class="logo">
+        404<span class="logo-dot">.</span>
+    </a>
+
+            <p>Modern Fashion Store</p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="home.html">Home</a><br>
+            <a href="shop.html">Shop</a><br>
+            <a href="aboutus.html">About Us</a><br>
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Follow Us</h3>
+
+    <div class="follow-section">
+
+    <div class="social-app">
+
+    <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://x.com/" target="_blank">
+            <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="https://www.youtube.com/" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+
+        <a href="https://www.pinterest.com/" target="_blank">
+            <i class="fa-brands fa-pinterest-p"></i>
+        </a>
+    </div>
+</div>
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 404 GARMENTS | CLOTHING
+    </p>
+</footer>
+
+<!--  CART MODAL  -->
+
+<div class="modal-overlay" id="cartOverlay">
+    <div class="modal-box cart-box">
+        <button class="modal-close" id="cartClose" aria-label="Close">&times;</button>
+        <h2>Your Cart</h2>
+
+        <div class="cart-items" id="cartItems"></div>
+        <p class="cart-empty" id="cartEmptyMsg" hidden>Your cart is empty.</p>
+
+        <div class="cart-summary">
+            <div class="cart-subtotal"><span>Subtotal</span><span id="cartSubtotal">$0.00</span></div>
+            <button class="checkout-btn" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+</div>
+
+<!--  CHECKOUT MODAL  -->
+
+<div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal-box checkout-box">
+        <button class="modal-close" id="checkoutClose" aria-label="Close">&times;</button>
+        <h2>Checkout</h2>
+
+        <form id="checkoutForm">
+
+            <label class="ck-field">
+                Full Name
+                <input type="text" id="ckName" required placeholder="Juan Dela Cruz">
+            </label>
+
+            <label class="ck-field">
+                Delivery Address
+                <textarea id="ckAddress" required placeholder="House No., Street, Barangay, City"></textarea>
+            </label>
+
+            <label class="ck-field">
+                Contact Number
+                <input type="tel" id="ckPhone" required placeholder="09xx xxx xxxx">
+            </label>
+
+            <div class="payment-options">
+                <span class="qv-size-label">Payment Method</span>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="cod" checked>
+                    Cash on Delivery
+                </label>
+
+                <label class="payment-choice">
+                    <input type="radio" name="payment" value="online">
+                    Online Payment
+                </label>
+            </div>
+
+            <div class="checkout-total"><span>Total</span><span id="checkoutTotal">$0.00</span></div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+
+        </form>
+    </div>
+</div>
+
+<!--  ORDER SUCCESS  -->
+
+<div class="success-overlay" id="successOverlay">
+    <div class="success-box">
+        <div class="success-icon">&#10003;</div>
+        <h2>Order Placed Successfully!</h2>
+        <p id="successMsg">Thank you for shopping with MWA.</p>
+        <button class="success-close-btn" id="successCloseBtn">Continue Shopping</button>
+    </div>
+</div>
+
+<script src="../js/cart.js"></script>
+<script src="../js/cart-ui.js"></script>
+<script src="../js/aboutus.js"></script>
+<script src="../js/profile.js"></script>
+
+</body>
+</html>
