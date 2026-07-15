@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         },
 
         4:{
-            image:"../images/member4.jpg",
+            image:"../images/justin.png",
             name:"Justin Gabriel Gojar",
             role:"Project Manager",
             description:"Leads the team and ensures successful project completion.",
